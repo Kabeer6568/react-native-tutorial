@@ -1,5 +1,6 @@
 import {
 
+  Button,
     Text,
     View,
 
@@ -8,6 +9,13 @@ import {
 const Firstname = "Kabeer";
   const Lastname = "Ali Alvi"
   const age = 20;
+
+  let CompanyEmp = 50
+
+  const UpdatedCompanyEmp = ()=>{
+    CompanyEmp = 80
+    console.warn(CompanyEmp)
+    }
 
 const BioData = () =>{
 
@@ -34,6 +42,12 @@ const BioData = () =>{
           {age>20 ? "You are eligible" : "Your are not aligible"}
         </Text>
       </View>
+
+      <Text>
+        Company Emp = {CompanyEmp}
+      </Text>
+
+      <Button title="Hello" onPress={UpdatedCompanyEmp} color={"red"}/>
 
     </>
   
