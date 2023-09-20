@@ -14,6 +14,7 @@ import {
 
 import BioData from './components/BioData';
 import UseState from './components/UseState';
+import Props from './components/Props';
 
 
 
@@ -26,6 +27,9 @@ const App = () => {
       <BioData />
 
       <UseState />
+
+
+      <Props />
     </>
   );
 };
