@@ -16,7 +16,8 @@ import BioData from './components/BioData';
 import UseState from './components/UseState';
 import Props from './components/Props';
 import AllInOne from './components/AllInOne';
-
+import Tabs from './components/Task';
+import HoverableButton from './components/HoverableButton';
 
 
 const App = () => {
@@ -26,7 +27,7 @@ const App = () => {
   return (
     <>
     <ScrollView>
-      
+
       <BioData />
 
       <UseState />
@@ -34,6 +35,9 @@ const App = () => {
       <Props />
 
       <AllInOne />
+
+      <Tabs />
+      
 
       </ScrollView>
     </>
