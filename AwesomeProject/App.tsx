@@ -12,37 +12,60 @@ import {
   View,
 } from 'react-native';
 
-import BioData from './components/BioData';
-import UseState from './components/UseState';
-import Props from './components/Props';
-import AllInOne from './components/AllInOne';
-import Tabs from './components/Task';
-import HoverableButton from './components/HoverableButton';
+import { NavigationContainer } from '@react-navigation/native';
+
+
+import Home from './screens/Home';
+import TabsScreen from './screens/TabsScreen';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+
+const Stack = createNativeStackNavigator();
+
+
+const HomeScreen = () => {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+    </View>
+  );
+}
+
 
 
 const App = () => {
-
-  
-  
   return (
-    <>
-    <ScrollView>
 
-      <BioData />
+    // <Home />
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Tabs Screen" component={TabsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
 
-      <UseState />
 
-      <Props />
-
-      <AllInOne />
-
-      <Tabs />
-      
-
-      </ScrollView>
-    </>
   );
-};
+}
+
+// const App = () => {
+
+
+
+//   return (
+
+    
+//       <NavigationContainer>
+
+//         <Stack.Navigator>
+//           <Stack.Screen name="Home" component={Home} />
+//         </Stack.Navigator>
+
+//       </NavigationContainer>
+    
+
+//   );
+// };
 
 
 export default App;
